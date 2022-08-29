@@ -19,9 +19,8 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew.bat
         
-    - name: Update spider jar
-      uses: EndBug/add-and-commit@v7
-      with:
-        default_author: github_actions
-        message: 'update spider jar'
-        add: "['./release/new.pkg']"
+    - name: Upload App To Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: com.github.tvbox.osc
+          path: ${{ github.workspace }}/apk/*
