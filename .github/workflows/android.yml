@@ -17,7 +17,7 @@ jobs:
         cache: gradle
         
     - name: Build with Gradle
-      run: ./gradlew.bat ec
+      run: ./gradlew.bat
         
     - name: Update spider jar
       uses: EndBug/add-and-commit@v7
