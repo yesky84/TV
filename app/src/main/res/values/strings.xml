@@ -27,6 +27,11 @@
     <string name="play_replay">Replay</string>
     <string name="play_reset">Reset</string>
     <string name="play_oped">OP&amp;ED</string>
+    <string name="play_reverse">Reverse</string>
+    <string name="play_forward">→</string>
+    <string name="play_backward">←</string>
+    <string name="play_forward_hint">Normal play switched</string>
+    <string name="play_backward_hint">Reverse play switched</string>
 
     <!-- Parse -->
     <string name="parse">Parse</string>
@@ -52,6 +57,13 @@
     <string name="error_play_format">Unsupported video format</string>
     <string name="error_episode">No episode data</string>
     <string name="error_empty">Not found</string>
+
+    <!-- Crash -->
+    <string name="crash_info">An unexpected error occurred.\nSorry for the inconvenience.</string>
+    <string name="crash_restart">Restart app</string>
+    <string name="crash_details">Error details</string>
+    <string name="crash_details_title">Error details</string>
+    <string name="crash_details_close">Close</string>
 
     <!-- UNIT -->
     <string name="second"><xliff:g name="name">%s</xliff:g> s</string>

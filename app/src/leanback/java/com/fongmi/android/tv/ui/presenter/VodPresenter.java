@@ -22,7 +22,10 @@ public class VodPresenter extends Presenter {
     }
 
     public interface OnClickListener {
+
         void onItemClick(Vod item);
+
+        boolean onLongClick(Vod item);
     }
 
     private void setLayoutSize() {
@@ -46,11 +49,14 @@ public class VodPresenter extends Presenter {
         ViewHolder holder = (ViewHolder) viewHolder;
         holder.binding.name.setText(item.getVodName());
         holder.binding.year.setText(item.getVodYear());
+        holder.binding.site.setText(item.getSiteName());
         holder.binding.remark.setText(item.getVodRemarks());
+        holder.binding.site.setVisibility(item.getSiteVisible());
         holder.binding.year.setVisibility(item.getYearVisible());
         holder.binding.remark.setVisibility(item.getRemarkVisible());
         ImgUtil.load(item.getVodName(), item.getVodPic(), holder.binding.image);
         setOnClickListener(holder, view -> mListener.onItemClick(item));
+        holder.view.setOnLongClickListener(v -> mListener.onLongClick(item));
     }
 
     @Override
